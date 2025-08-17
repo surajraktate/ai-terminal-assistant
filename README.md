@@ -2,7 +2,6 @@
 *Your AI-powered Ubuntu terminal companion.*  
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
-[![Build](https://img.shields.io/github/actions/workflow/status/yourrepo/ci.yml?branch=main)](https://github.com/yourrepo/ai-terminal-assistant/actions)  
 [![Debian Package](https://img.shields.io/badge/.deb-download-blue)](https://github.com/yourrepo/ai-terminal-assistant/releases)  
 
 AI Terminal Assistant lets you **ask questions in natural language** and automatically runs the correct Linux commands — securely, with explanations.  
