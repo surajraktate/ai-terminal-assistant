@@ -58,11 +58,11 @@ You can customize:
 ---
 
 ### Usage Example  
-```
+```bash
 ai "Show me network out packet count in last hour"
 ```
 
-``
+```bash
 ============================================================
 Request: Show me network out packet count in last hour
 🤖 Generating command...
