@@ -4,18 +4,32 @@ This roadmap outlines the planned evolution of the project. Each version adds sa
 
 ---
 
-## ✅ v1 – Core Release (MVP)
+## ✅ v0.1.0 – Core Release (MVP)
 **Status:** Released 🎉  
 
 - `.deb` installer for Ubuntu  
 - Convert **natural language → safe Ubuntu shell commands**  
 - Runs inside your **existing terminal** (no need to switch any custom terminals)  
-- Works with OpenAI API (bring your own key)  -
-- **Free mode** using our managed backend (limited requests per day)  
+- Works with OpenAI API (bring your own key)
 
 ---
 
-## 🔒 v2 – Safety & Better UX
+## ⏭️ v0.1.1 – Managed Backend (Free Mode)
+**Goal:** Let users run the assistant **without providing their own API key** by proxying requests through our AWS backend. Enforce **free tier limits (50 calls/day)**.
+
+### What’s shipping
+- **Managed inference API** (AWS API Gateway → Lambda)  
+  - Our server uses **our OpenAI API key** behind the scenes  
+  - Rate limit: **50 requests/day per user** (hard cap; 429 after limit)  
+  - Basic abuse protection, logging, and observability  
+- **Client toggle**: choose **Managed Mode** (no key) or **BYO key**  
+- **Usage meter** in CLI output (e.g., “17/50 used today”)  
+- **Graceful fallback**: if Managed quota hit → suggest BYO key  
+- **Docs**: updated README + FAQ about privacy, limits, and reliability  
+
+---
+
+## 🔒 v0.2.0 – Safety & Better UX
 **Goal:** Make the tool safe, trustworthy, and pleasant to use  
 
 - [ ] **Dry Run Mode** → Show command, only execute after user confirms  
@@ -27,7 +41,7 @@ This roadmap outlines the planned evolution of the project. Each version adds sa
 
 ---
 
-## 🌍 v3 – Expansion & Flexibility
+## 🌍 v0.3.0 – Expansion & Flexibility
 **Goal:** Reach more users and make it extensible  
 
 - [ ] **Multi-shell support** (Bash, Zsh, Fish, PowerShell)  
@@ -39,7 +53,7 @@ This roadmap outlines the planned evolution of the project. Each version adds sa
 
 ---
 
-## 🛠️ v4 – Advanced Features (Future Ideas)
+## 🛠️ v0.4.0 – Advanced Features (Future Ideas)
 **Goal:** Power-user tools & learning assistant  
 
 - [ ] **Contextual Help** → Explain output of commands (`df -h`, `ps aux`, etc.)  
