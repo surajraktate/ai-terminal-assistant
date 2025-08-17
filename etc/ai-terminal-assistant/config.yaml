@@ -1,0 +1,51 @@
+
+# AI Terminal Assistant System Configuration
+# This file contains system-wide defaults
+# Users can override these in ~/.config/ai-terminal-assistant/config.yaml
+# Author: surajraktate
+api:
+  # Default AI provider and model
+  provider: "openai"
+  model: "gpt-4o-mini"
+  timeout: 30
+  max_tokens: 200
+
+  # Rate limiting (requests per minute)
+  rate_limit: 60
+
+security:
+  # Security settings
+  require_confirmation: true
+  block_dangerous_commands: true
+  log_commands: true
+  max_command_length: 1000
+
+  # Allowed command categories
+  allowed_categories:
+    - "file_operations"
+    - "process_management"
+    - "system_info"
+    - "network_tools"
+
+  # Additional blocked commands (beyond defaults)
+  custom_blocked_commands: []
+
+ui:
+  # User interface settings
+  color_output: true
+  show_progress: true
+  truncate_output: 50
+
+  # Theme settings
+  theme: "monokai"
+  show_timestamps: false
+
+logging:
+  # Logging configuration
+  level: "INFO"
+  max_file_size: "10MB"
+  backup_count: 5
+
+  # Log locations
+  user_log_dir: "~/.local/share/ai-terminal-assistant"
+  system_log_dir: "/var/log/ai-terminal-assistant"

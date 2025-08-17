@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	@echo "Skipping build step — Python project"
+
+override_dh_auto_test:
+	@echo "Skipping tests for Debian build"
+
+override_dh_auto_install:
+	mkdir -p debian/ai-terminal-assistant/usr/bin
+	cp usr/bin/ai debian/ai-terminal-assistant/usr/bin/
+	chmod +x debian/ai-terminal-assistant/usr/bin/ai
+
+	mkdir -p debian/ai-terminal-assistant/usr/lib/ai-terminal-assistant
+	cp -r usr/lib/ai-terminal-assistant/* debian/ai-terminal-assistant/usr/lib/ai-terminal-assistant/
+
+	mkdir -p debian/ai-terminal-assistant/etc/ai-terminal-assistant
+	cp etc/ai-terminal-assistant/config.yaml debian/ai-terminal-assistant/etc/ai-terminal-assistant/

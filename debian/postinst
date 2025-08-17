@@ -1,0 +1,23 @@
+#!/bin/bash
+set -e
+
+case "$1" in
+    configure)
+        # Create system directories
+        mkdir -p /etc/ai-terminal-assistant
+        mkdir -p /usr/lib/ai-terminal-assistant
+
+        # Install Python dependencies system-wide
+        pip3 install -r /usr/lib/ai-terminal-assistant/requirements.txt
+
+        # Set permissions
+        chmod 755 /usr/bin/ai
+        chmod -R 755 /usr/lib/ai-terminal-assistant
+        chmod 644 /etc/ai-terminal-assistant/config.yaml
+
+        echo "AI Terminal Assistant installed successfully!"
+        echo "Run 'ai --config' to configure your API key."
+        ;;
+esac
+
+exit 0

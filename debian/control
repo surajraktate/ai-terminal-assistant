@@ -1,0 +1,24 @@
+Source: ai-terminal-assistant
+Section: utils
+Priority: optional
+Maintainer: Your Name <your.email@example.com>
+Build-Depends: debhelper (>= 12), python3-all, python3-setuptools, dh-python, python3-pytest
+Standards-Version: 4.5.0
+Homepage: https://github.com/yourusername/ai-terminal-assistant
+
+Package: ai-terminal-assistant
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, python3-pip, python3-venv
+Suggests: curl, wget
+Description: AI-powered terminal assistant for Ubuntu
+ AI Terminal Assistant converts natural language requests into safe
+ Ubuntu shell commands using OpenAI's GPT models. Features include:
+ .
+  * Natural language to shell command conversion
+  * Built-in security validation
+  * Interactive and single-command modes
+  * System-wide installation and configuration
+  * Comprehensive logging and audit trails
+ .
+ The assistant helps users execute complex shell operations without
+ needing to remember exact command syntax.

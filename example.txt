@@ -1,0 +1,35 @@
+# 1. Check open ports
+ai "show all processes listening on ports"
+
+# 2. Check recent system errors
+ai "show last 20 error messages from system logs"
+
+# 3. Check memory usage
+ai "show top 10 processes by memory usage"
+
+# 4. Find large log files
+ai "find all log files larger than 100MB"
+
+# 5. Check disk space
+ai "show disk usage for all mounted filesystems"
+
+# 6. Check failed systemd services
+ai "list all failed systemd services"
+
+# 7. Monitor network usage in real time
+ai "show live network usage for each process"
+
+# 8. Check Python version and installed packages
+ai "list python version and all installed packages"
+
+# 9. Debug high CPU load
+ai "find which process is causing high CPU usage"
+
+# 10. Trace connections to a specific port
+ai "show all IP addresses connected to port 22"
+
+# 11. Check when the system was last rebooted
+ai "show system uptime and last reboot time"
+
+# 12. Find recently modified files
+ai "find all files modified in the last 24 hours"
