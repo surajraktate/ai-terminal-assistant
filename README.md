@@ -130,10 +130,12 @@ dpkg-buildpackage -us -uc
 ---
 
 ## ✅ Roadmap  
-- [ ] Plugin system for custom commands  
-- [ ] Multi-AI provider fallback  
-- [ ] Rich TUI interface  
+We’re building this project step by step:
 
+- ✅ v1 – Core release (done)
+- 🔒 v2 – Safety & better UX (in progress)
+- 🌍 v3 – Expansion & flexibility (planned)
+👉 See the full [ROADMAP.md](./ROADMAP.md) for details.
 ---
 
 ## 🤝 Contributing  
